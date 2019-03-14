@@ -4,7 +4,9 @@
   "description": "This is a project for javascript coursera class",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm start lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Harleysplayground/bootstrap/issues"
   },
-  "homepage": "https://github.com/Harleysplayground/bootstrap#readme"
+  "homepage": "https://github.com/Harleysplayground/bootstrap#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  }
 }
