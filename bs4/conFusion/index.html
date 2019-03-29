@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/old_styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
 
     <title>Ristorante Con Fusion</title>
@@ -32,9 +32,9 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <button type="button" id="login" class="btn btn-block btn-sm text-white">
                         <span class="fa fa-sign-in"></span>Login
-                    </a>
+                    </button>
                 </span>
             </div>
         </div>
@@ -179,7 +179,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-sm btn-warning">Reserve Table</a>
+                    <button type="button" class="btn btn-block btn-sm btn-warning" id="reserveTableButton">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -346,7 +346,20 @@
             });
         });
     </script>
-
+    <script>
+        $(document).ready(function(){
+            $("#reserveTableButton").click(function(){
+                $("#reserveModal").modal();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#login").click(function(){
+                $("#loginModal").modal();
+            });
+        });
+    </script>
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker4').datetimepicker({
